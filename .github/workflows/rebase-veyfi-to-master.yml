@@ -22,6 +22,6 @@ jobs:
         git checkout veyfi-develop
         git status
         git tag
-        git rebase develop --ours
+        git rebase --ours develop
         git remote -v
         git push origin veyfi-develop --force
