@@ -1,4 +1,4 @@
-name: rebase veyfi to master
+name: rebase veyfi-master to master
 
 on:
   push:
@@ -16,12 +16,6 @@ jobs:
         fetch-depth: '0'
     - name: git
       run: |
-        git --version
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
         git checkout veyfi-develop
-        git status
-        git tag
         git rebase -Xours develop
-        git remote -v
         git push origin veyfi-develop --force
